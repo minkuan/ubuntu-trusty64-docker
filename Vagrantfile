@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
+
+  config.vm.network :private_network, ip: "10.0.0.10"
+  config.vm.hostname = "alpha"
   
   config.vm.provision "docker"
 
